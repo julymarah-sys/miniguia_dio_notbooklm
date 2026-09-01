@@ -1,1 +1,13 @@
+**Prompt 1:** `crie um resumo do arquivo GUIA PRÁTICO DE ENGENHARIA DE PROMPT de 2024`
+**Prompt Ajustado:** `Analise o arquivo e gere um resumo com máximo 2 parágrafos e 6 linhas seguindo as seguintes necessidades.
+não alucine e crie conteúdo;
+não gere o resumo com viés;
+traga dois exemplos de promps mau elaborados e bem elaborados.`
 
+**Prompt 2 qual é o maior erro em um prompt ?
+**Prompt Ajustado:** Procure no arquivo "10 Erros Comuns ao Escrever Prompts para IA e Como Evitá-los" os 5 piores erros de prompts. Crie uma resposta em formato de lista com duas colunas, onde a primeira coluna será preenchida com os erros e a segunda coluna com uma explicação com máximo 2 linhas. Lembre-se de: 
+gerar a resposta sem vies,
+sem alucinar nas respostas.
+
+**Prompt 3 Como elaborar um prompt eficaz? 
+**Prompt Ajustado:** Aja como um engenheiro de prompt sênior e especialista em comunicação com modelos de linguagem. Task: Explique os pilares fundamentais para a elaboração de um prompt altamente eficaz.
