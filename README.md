@@ -109,13 +109,83 @@ Garante o Resumo sem Perder Conteúdo: Ao impor um limite físico à IA ("exatam
 Fornece Contexto: Explicar quem é o leitor final ajuda a IA a calibrar o tom da escrita de maneira adequada, sem que ela precise adivinhar o propósito do texto
 
 ## 4. Miniguia Final
-### 4.1 Resumo
+### 4.1 Resumo prompt 4 "Agora elabore um resumo com até 1500 caracteres, ele precisa conter:
+*o que foi abordado até aqui neste estudo;
+*inclua somente os arquivos citados;
+*sugestões sobre como elaborar um promt eficaz, mas *se ser extenso;
+*cuidado com viés;
+*sem alucinações."
+#### Resumo elaborado pela IA do notbooklm
 
+Este estudo abordou a engenharia de prompts voltada à criação de interfaces, layouts e materiais visuais coerentes
+. Analisamos frameworks estruturais como o RTF (Role, Task, Format)
+e o PROMPT,
+ essenciais para guiar a IA de forma profissional. Também exploramos o uso de ferramentas práticas para wireframes (v0.dev), protótipos (Figma AI) e o design de painéis dinâmicos
+. Os maiores erros identificados envolvem a vagueza, a omissão de contexto e a falta de validação humana real
+. Para consistência de marca, destacou-se o uso de palavras de estilo específicas e especificações explícitas de paleta de cores, tipografia e restrições.
+Sugestões para elaborar um prompt eficaz:
+Seja específico e use restrições: Defina claramente o papel (Role) da IA, o formato de saída e liste o que ela deve evitar (ex: "sem gradientes", "sem fotorrealismo").
+Pratique o encadeamento (Prompt Chaining): Não peça tudo de uma vez; divida tarefas complexas em rodadas progressivas (estrutura, componentização e estilo final).
+Adicione contexto e parâmetros técnicos: Inclua o público-alvo, objetivos claros, paleta de cores com códigos hexadecimais e o comportamento esperado dos dados
 
 ### 4.2 Glossário
 | Termo | Definição |
 | --- | --- |
-| Churn | % de cancelamento |
+**Zero Shot:** Abordagem de comando direto sem o envio de exemplos de apoio, ideal para respostas rápidas.
+**Few Shot:** Técnica de incluir exemplos práticos reais de entrada e saída dentro do prompt para moldar respostas mais complexas.
+**Cadeia de Pensamento (Chain of Thought - CoT):** Técnica que instrui o modelo a realizar e expor um raciocínio lógico passo a passo antes de dar a resposta final.
+**Cadeia de Pensamento Contrastiva:** Método de incluir exemplos de respostas corretas e incorretas no prompt para ensinar visualmente o que a IA deve evitar.
+**Esqueleto de Pensamento (Skeleton of Thought):** Abordagem focada em fazer o modelo gerar primeiro uma estrutura ou sumário inicial (esqueleto) para só então preencher e aprofundar os dados.
+**Encadeamento de Prompts (Prompt Chaining):** Técnica de dividir uma tarefa grande em várias etapas iterativas (ex: pedir o wireframe, depois os componentes, depois o polimento de marca), mantendo a geração focada e livre de erros.
+**Ancoragem Visual / Extração de Design System:** Estratégia de pedir para a IA primeiro analisar e mapear os padrões visuais (como cores, tipografia e sombras) de uma imagem ou referência antes de criar novos layouts, melhorando drasticamente a qualidade visual.
 
 ### 4.3 Prompts Reutilizáveis
-`Atue como tutor de SQL. Explique [TEMA] com exemplo + exercício`
+Template 1: Framework RTF (Role · Task · Format)
+Ideal para tarefas de escrita, geração de conteúdo profissional ou materiais educativos em que a persona da IA define o nível técnico da resposta
+.
+**Role:** Você é um [inserir especialidade profissional, ex: Designer de UX sênior especializado em acessibilidade].
+**Task:** Crie [descrever a tarefa detalhadamente, ex: 10 mensagens de microcopy de erro para um formulário de cadastro bancário].
+**Format:** Forneça o resultado formatado em [inserir formato, ex: uma tabela Markdown com colunas para o "Cenário do Erro", "Texto do Microcopy" e "Justificativa da Usabilidade"].Adote um tom de voz [inserir tom, ex: amigável, empático e focado na solução].
+Template 2: Estrutura "PROMPT" (Contexto e Processo)
+Perfeito para planejamentos complexos, criação de estratégias e redação que exijam profundidade e total alinhamento de contexto
+.
+# Contextualização e Planejamento de Projeto
+
+**P (Persona):** Aja como um [inserir papel técnico, ex: Especialista em marketing digital e redação de landing pages].
+**R (Roteiro):** Escreva um [inserir o que deve ser produzido, ex: Roteiro estruturado para uma página de vendas de alta conversão].
+**O (Objetivo):** O propósito principal deste conteúdo é [inserir objetivo, ex: Chamar a atenção do usuário e convertê-lo em leads qualificados].
+**M (Modelo de Saída):** Divida o resultado em seções utilizando Markdown (`#` para títulos) . Inclua especificamente as seções de [inserir seções, ex: Headline, Dor do Cliente, Oferta de Valor e Chamada para Ação (CTA)].
+**P (Panorama):** O contexto de fundo é que [inserir dados do seu cenário, ex: Meu cliente é uma startup que vende software de produtividade para pequenas equipes remotas].
+**T (Transformar):** Apresente o rascunho inicial e aguarde minhas instruções para aplicar refinamentos [6, 8].
+Template 3: Estrutura de 5 Blocos (Design Visual e UI)
+Desenvolvido especificamente para geração de layouts, interfaces ou peças gráficas coerentes, eliminando as ambiguidades visuais que costumam deixar o design gerado por IA com cara de amador
+.
+# Diretrizes para Interface Visual de [Inserir Nome do Projeto/App]
+
+**Formato e Uso:** [Inserir tipo de peça, ex: Uma landing page de produto responsiva para desktop e mobile].
+**Paleta de Cores Obrigatória:** Utilize estritamente os seguintes códigos hexadecimais: [Cor Principal: #HEX], [Cor Secundária: #HEX], [Fundo: #HEX], [Destaque/CTA: #HEX].
+**Tipografia e Ritmo:** Use a família de fontes [inserir fonte, ex: Inter], estabelecendo uma hierarquia visual clara de tamanhos entre títulos, subtítulos e textos de apoio.
+**Regras de Consistência:** Garanta que todos os cards tenham [inserir raio de borda, ex: bordas arredondadas de 8px], ícones com a mesma espessura de traço e padrão visual de sombreamento limpo.
+**Restrições (O que EVITAR):** Não utilize [inserir restrições, ex: gradientes agressivos, fotorrealismo de banco de imagens, mistura de estilos de ícones ou elementos visuais fora da paleta de cores fornecida].
+Template 4: Anatomia de Dashboard e Painéis Admin
+Ideal para a criação de sistemas e telas onde o foco está na organização de dados funcionais, fluxos de uso e componentes de interação para produção.
+# Especificações de Interface para Painel Administrativo
+
+**Tipo de Componente:** [Inserir elemento, ex: Uma tabela de dados para gestão de estoque e produtos].
+**Contexto dos Dados de Exemplo:** Exiba colunas para [inserir as colunas desejadas, ex: Miniatura do produto, Nome com SKU, Categoria, Preço formatado em R$, Quantidade e Status].
+**Funcionalidade Esperada:** O componente deve ser interativo e prever comportamento de [inserir funções, ex: ordenação por coluna, filtro por categoria, paginação de itens, busca rápida por texto e botões rápidos de ação rápida].
+**Estados da Interface:** Desenvolva e apresente visualmente o layout da tabela nos estados de [ex: Carregamento (Loading skeleton), Tabela preenchida com dados e Estado vazio/sem resultados encontrados].
+**Restrições de Estilo:** Siga um layout de [inserir estilo, ex: sidebar de navegação escura na esquerda com área ampla de conteúdo clara à direita].
+Template 5: Prompt em Duas Etapas para "Extração de Design System"
+Utilize este método se você deseja copiar a identidade visual de uma referência (como uma imagem ou site existente) para aplicá-la em uma nova interface sem que o resultado pareça genérico.
+
+Etapa 1 (Extração):
+[Anexe a imagem ou forneça o link da referência]
+
+Aja como um UI designer sênior. Analise detalhadamente este arquivo de referência e extraia o seu Design System completo. 
+Liste de forma estruturada:
+1. A paleta de cores exata (identificando cores de fundo, texto, botões e destaque).
+2. As regras de tipografia e espaçamento entre blocos.
+3. Os raios de borda, estilos de sombras e consistência de traço dos ícones.
+Etapa 2 (Aplicação):
+Agora, utilizando rigorosamente o Design System que você acabou de extrair na etapa anterior, crie o layout e a estrutura para [inserir seu novo projeto, ex: uma tela de checkout de plano de assinatura mobile-first].
