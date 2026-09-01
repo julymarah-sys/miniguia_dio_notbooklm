@@ -5,7 +5,7 @@ Caderno temático notbooklm
 **Objetivos:**
 1. Aprender a utilizar as técnicas de engenharia de prompt para obter melhores respostadas das IAs.
 2. Usar NotebookLM como tutor para acelerar aprendizado.
-3. Criar portfólio de aplicação de prompts no notbookl!
+3. Criar portfólio de aplicação de prompts no notbooklm!
 
 ## 2. Curadoria de Fontes
 | Fonte | Tipo | Link |
